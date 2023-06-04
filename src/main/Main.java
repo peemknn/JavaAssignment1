@@ -1,7 +1,8 @@
 package main;
 
 import java.util.*;
-import exception.InvalidInputException;
+
+import logic.Diamond;
 
 public class Main {
 
@@ -22,6 +23,10 @@ public class Main {
 						throw new Exception();
 					}else {
 						System.out.println("Pass");
+						Diamond diamond = new Diamond();
+						diamond.diamondShape(n);
+						diamond.printDiamond();
+						
 						break;
 					}
 				}else if(shape.equals("Butterfly")){
@@ -37,10 +42,7 @@ public class Main {
 					throw new Exception();
 			}
 				
-				//}else if(!shape.equals("Diamond") || !shape.equals("Butterfly")) {
-					//throw new Exception();
 				
-				//break;
 			}catch(Exception e) {
 				System.out.println("Invalid input, Please try again.");
 			}
