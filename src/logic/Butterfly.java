@@ -2,49 +2,22 @@ package logic;
 
 public class Butterfly {
 	public void butterflyShape(int n) {
-		System.out.println("This is butterfly: "+n);
-		int spaces = n*2-1;
-		int stars = 2;
-		int gap = n*2-1;
+		System.out.println("Display Butterfly: " + n);
+		final String star = "+ ";
+		final String space = "  ";
+		StringEdit edit = new StringEdit();
 		
-		for (int i = 0; i < n*2+1 ; i++) {
-			//System.out.println(i);
-			for (int j = 0; j < stars/2; j++) {
-                System.out.print("+ ");
-            }
-			
-			for (int k = 0; k < spaces; k++) {
-                if(spaces == 1) {
-    				System.out.print("- ");
-    				break;
-    			}
-                System.out.print(" ");
-            }
-			for (int m = 0;m < gap; m++) {
-				if(gap == 1) {
-    				break;
-    			}
-				System.out.print(" ");
-			}
-			for (int l = 0; l < stars/2; l++) {
-                System.out.print("+ ");
-            }
-			
-			System.out.println();
-
-            if (i < n - 1) {
-                spaces = spaces - 2;
-                gap = gap -2;
-                stars += 2;
-            } else {
-            
-                spaces = spaces +2;
-                gap = gap + 2;
-                stars -= 2;
-            }
+		//top
+		for (int i = 1; i < n; i++) {
+			System.out.println(edit.repeat(star, i) + edit.repeat(space, 2 * (n - i) + 1) + edit.repeat(star, i));
 		}
+		//middle
+		System.out.println(edit.repeat(star, n) + "- " + edit.repeat(star, n));
 		
+		//bottom
+		for (int i = n - 1; i >= 1; i--) {
+			System.out.println(edit.repeat(star, i) + edit.repeat(space, 2 * (n - i) + 1) + edit.repeat(star, i));
+		}
 	}
-
 }
 
