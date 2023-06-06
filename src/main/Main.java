@@ -18,7 +18,7 @@ public class Main {
 				// split into shape type and int n
 				String[] input = scanner.nextLine().split(" ");
 				if(input[0].equals("close")) {
-					System.out.println("Bye...");
+					System.out.println("Closing..." + "\n" + "Goodbye");
 					break;
 				}
 				String shape = input[0];
