@@ -1,6 +1,6 @@
 # JavaAssignment1
 User manual:
-1. Input shape type and n. (For example : Butterfly 2)
+1. Input shapetype(String) and n (Integer).  (example : Butterfly 2)
 2. Press enter.
 
 Caution!!
