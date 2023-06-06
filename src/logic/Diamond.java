@@ -1,11 +1,13 @@
 package logic;
 
 public class Diamond {
+	private final String star = "+ ";
+	private final String space = "  ";
+
 	public void diamondShape(int n) {
-		System.out.println();
-		final String star = "+ ";
-		final String space = "  ";
+
 		StringEdit str = new StringEdit();
+		System.out.println();
 
 		// top
 		for (int i = n / 2; i >= 1; i--) {
